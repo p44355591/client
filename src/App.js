@@ -1,6 +1,8 @@
-// import { SameWord } from "./components/state-HomeWork1";
-// import { Timer } from "./components/state-HomeWork2";
 import { AppRouter } from "./app/AppRouter";
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';  
+import 'primereact/resources/primereact.css';
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
 
 
 
