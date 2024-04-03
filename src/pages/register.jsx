@@ -2,35 +2,30 @@ import { InputText } from "primereact/inputtext";
 import React, { useState } from "react";
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
+import { useDispatch } from "react-redux";
 
 export const Register = () => {
     const [value, setValue] = useState('');
+    const dispatch = useDispatch()
+
+    function onSubmit(){
+        //פה צריך להיות קריאת שרת שמעדכנת את המשתמש
+        //אם זה הצליח -  לא היה שום בעיה בדרך 
+        //אנחנו נרצה לשמור שיש לנו לקוח מחובר
+        //לבן נששתמש ברידאקס
+        //dispatch(updateCurrentUser(פה נשלח את הלקוח שחזר מהשרת))
+        //וונוט את הלקוח לדף הבית באמצעות useNavigate
+    }
     
 
-    return (<>
+    return (
         <div className="card flex justify-content-center">
-            <div className="flex flex-column gap-2">
-                <label htmlFor="username">Username</label>
-                <InputText id="username" aria-describedby="username-help" />
-                <small id="username-help">
-                    Enter your username to join .
-                </small>
-            </div>
-            <div className="flex flex-column gap-2">
-            <label htmlFor="email">Email</label>
-                <InputText id="email" aria-describedby="email-help" />
-                <small id="email-help">
-                    Enter your email .
-                </small>
-                </div>
-                <div className="flex flex-column gap-2">
-                <Password value={value} onChange={(e) => setValue(e.target.value)} toggleMask />
-                </div>
-                <div className="card flex flex-wrap justify-content-center gap-3">
-            <Button label="Sambit" raised />
-            </div>
-        </div>
-    register page</>)
+            <input>name</input>
+            <input>password</input>
+            <input>name</input>
+            <button onClick={onSubmit}>register</button>
+
+           </div>)
 }
 
 
